@@ -1,15 +1,11 @@
-# chrome-extension-development
+<p align="center">
+  <img src="./images/crx.png" height="220" />
+</p>
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.17. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+# Chrome 扩展开发完全指南 📖
+- [ ] Chrome扩展开发系列开篇
+- [x] [Chrome扩展的核心：manifest 文件（上）](./packages/Chrome扩展开发完全指南/manifest/index.md)
+- [ ] Chrome扩展开发中的消息传递
+- [ ] Chrome扩展开发实战：Mock Input
+- [ ] 打造一个极度舒适的Chrome扩展项目开发环境
+- [ ] Chrome扩展开发系列完结篇
