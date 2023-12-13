@@ -1,0 +1,30 @@
+{
+  "name": "mock-input-crx",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+<<<<<<< HEAD
+    "mockjs": "^1.1.0",
+=======
+>>>>>>> be8cdf74f15b894ba14284d41470b70f3bfdecf3
+    "vue": "^3.3.8"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.21",
+    "@types/chrome": "^0.0.254",
+<<<<<<< HEAD
+    "@types/mockjs": "^1.0.10",
+=======
+>>>>>>> be8cdf74f15b894ba14284d41470b70f3bfdecf3
+    "@vitejs/plugin-vue": "^4.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.22"
+  }
+}
