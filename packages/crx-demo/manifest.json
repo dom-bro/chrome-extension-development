@@ -2,9 +2,37 @@
   "manifest_version": 3,
   "name": "CRX Demo",
   "version": "1.0.0",
+
   "description": "扩展的描述",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
-  }
+  },
+
+  "content_scripts": [
+    {
+      "css": ["content-scripts/document_start.css"],
+      "js": ["content-scripts/document_start.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_start"
+    },
+    {
+      "css": ["content-scripts/document_end.css"],
+      "js": ["content-scripts/document_end.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    },
+    {
+      "css": ["content-scripts/document_idle.css"],
+      "js": ["content-scripts/document_idle.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle"
+    },
+    {
+      "js": ["content-scripts/document_idle_main.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
 }
