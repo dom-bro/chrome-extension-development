@@ -34,5 +34,16 @@
       "run_at": "document_idle",
       "world": "MAIN"
     }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "cookies",
+    "desktopCapture",
+    "downloads",
+    "notifications",
+    "storage"
   ]
 }
