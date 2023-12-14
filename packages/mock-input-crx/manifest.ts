@@ -7,9 +7,12 @@ export default defineManifest(async (env) => {
   return {
     manifest_version: 3,
     name,
-    description: 'Quick Input with Mock',
+    description: '快速填充表单输入框',
     version: packageJson.version,
-    permissions: ['contextMenus'],
+    permissions: [
+      'activeTab',
+      'contextMenus',
+    ],
     icons: {
       '48': 'logo48.png',
       '128': 'logo128.png',

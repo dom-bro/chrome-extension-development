@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Mock Input",
+  "version": "0.1.0",
+
+  "description": "给表单输入框快速填充假数据",
+  "icons": {
+    "48": "logo48.png"
+  },
+
+  "content_scripts": [
+    {
+      "js": [
+        "mock.min.js",
+        "content-script.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
