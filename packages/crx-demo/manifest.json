@@ -44,6 +44,27 @@
     "desktopCapture",
     "downloads",
     "notifications",
-    "storage"
-  ]
+    "storage",
+    "sidePanel"
+  ],
+
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "这是一个草莓🍓",
+    "default_icon": {
+      "16": "popup/emotion_005.png"
+    }
+  },
+  "devtools_page": "devtools/index.html",
+  "side_panel": {
+    "default_path": "side_panel/index.html"
+  },
+  "options_page": "options_page/index.html",
+  "chrome_url_overrides" : {
+    // "newtab": "newtab/index.html"
+    // "history": "history/index.html"
+    "bookmarks": "bookmarks/index.html"
+  },
+
+  "homepage_url": "https://dombro.site/"
 }
