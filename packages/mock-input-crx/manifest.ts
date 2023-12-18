@@ -10,7 +10,6 @@ export default defineManifest(async (env) => {
     description: '快速填充表单输入框',
     version: packageJson.version,
     permissions: [
-      'activeTab',
       'contextMenus',
     ],
     icons: {
