@@ -16,7 +16,7 @@
 
 对于前端开发来说，Chrome 更是形影不离的饭碗级软件 😁。既然 Chrome 这么重要，那么把它研究透一定大有裨益。
 
-在我看来，Chrome 值得深入研究的地方早有两块：DevTools 和 Extension。
+在我看来，Chrome 值得深入研究的地方有两块：DevTools 和 Extension。
 
 先说说 **DevTools**，即开发者工具，是 Chrome 为我们提供的一套功能强大的集开发，调试， 分析诸多功能于一身的内置工具。如下图所示：
 

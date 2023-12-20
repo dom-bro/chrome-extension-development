@@ -14,32 +14,42 @@
       "css": ["content-scripts/document_start.css"],
       "js": ["content-scripts/document_start.js"],
       "matches": ["<all_urls>"],
-      "run_at": "document_start"
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
     },
     {
       "css": ["content-scripts/document_end.css"],
       "js": ["content-scripts/document_end.js"],
       "matches": ["<all_urls>"],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "all_frames": true
     },
     {
       "css": ["content-scripts/document_idle.css"],
       "js": ["content-scripts/document_idle.js"],
       "matches": ["<all_urls>"],
-      "run_at": "document_idle"
+      "run_at": "document_idle",
+      "all_frames": true
     },
     {
       "js": ["content-scripts/document_idle_main.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_idle",
-      "world": "MAIN"
+      "world": "MAIN",
+      "all_frames": true
     }
   ],
   "background": {
-    "service_worker": "background/service-worker.js",
+    "service_worker": "service-worker.js",
     "type": "module"
   },
   "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback",
+    "webRequest",
     "cookies",
     "desktopCapture",
     "downloads",
@@ -47,13 +57,16 @@
     "storage",
     "sidePanel"
   ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
 
   "action": {
     "default_popup": "popup/index.html",
-    "default_title": "这是一个草莓🍓",
-    "default_icon": {
-      "16": "popup/emotion_005.png"
-    }
+    "default_title": "这是一个草莓🍓"
+    // "default_icon": {
+    //   "16": "popup/emotion_005.png"
+    // }
   },
   "devtools_page": "devtools/index.html",
   "side_panel": {
@@ -63,8 +76,18 @@
   "chrome_url_overrides" : {
     // "newtab": "newtab/index.html"
     // "history": "history/index.html"
-    "bookmarks": "bookmarks/index.html"
+    // "bookmarks": "bookmarks/index.html"
   },
 
-  "homepage_url": "https://dombro.site/"
+  "homepage_url": "https://dombro.site/",
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "responseHeaders",
+        "enabled": true,
+        "path": "./rule_resources/responseHeaders.json"
+      }
+    ]
+  }
 }

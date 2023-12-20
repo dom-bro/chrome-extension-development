@@ -2,7 +2,8 @@ import { Random } from 'mockjs'
 
 let contextmenuTarget: EventTarget | null = null
 function setTargetValue(tar: HTMLInputElement, newVal: string | number, isInsert?: boolean) {
-  console.log('setTargetValueeee', tar.type, newVal)
+  const isFocused = document.activeElement === tar
+  console.log('setTargetValueeeee', tar.type, newVal, isFocused)
   tar.focus()
   const lastValue = tar.value
 
@@ -22,7 +23,7 @@ function setTargetValue(tar: HTMLInputElement, newVal: string | number, isInsert
   // @ts-expect-error React 16
   tar._valueTracker?.setValue(lastValue)
   tar.dispatchEvent(evt)
-  tar.blur()
+  // if (!isFocused) tar.blur()
 }
 
 function generateRandomChinesePhoneNumber() {

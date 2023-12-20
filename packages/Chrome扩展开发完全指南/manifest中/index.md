@@ -42,6 +42,7 @@ content_scripts 里的配置项解释：
   `path`：指明匹配的网址路径。`/*` 表示匹配所有路径。
 
   **特殊 case**：
+  <!-- https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns -->
   - `"<all_urls>"` 匹配所有页面！一般，额，简单粗暴，就用这个😅！
 
 - `"run_at"`：**脚本注入时机**。默认情况下，扩展会在页面处于空闲状态时注入 css 和 js。有以下3个时机可供选择：

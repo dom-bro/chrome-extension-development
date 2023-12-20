@@ -1,0 +1,2 @@
+- chrome://* 属于 local resource，其请求返回头上有 X-Frame-Options: DENY，任何企图加载它们都会报错 Not allowed to load local resource
+- chrome.webRequest.* 和 declarativeNetRequest 需要配置 host_permissions!
