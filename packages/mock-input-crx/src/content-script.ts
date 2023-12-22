@@ -127,7 +127,7 @@ window.addEventListener('contextmenu', (ev: MouseEvent) => {
   contextmenuTarget = ev.target
 })
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log('onMessageeeeee', request, sender, sendResponse, contextmenuTarget)
+  console.log('runtime.onMessageeeeee', request, sender, sendResponse, contextmenuTarget)
 
   const inputs: HTMLInputElement[] = Array.from(document.querySelectorAll('input, textarea'))
   inputs.forEach((v: HTMLInputElement) => {

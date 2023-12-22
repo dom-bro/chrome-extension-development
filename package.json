@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@types/chrome": "^0.0.254",
     "bun-types": "latest"
   },
   "peerDependencies": {

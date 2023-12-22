@@ -42,10 +42,12 @@
     }
   ],
   "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
+    "type": "module",
+    "service_worker": "background/service-worker.js"
   },
   "permissions": [
+    "tabs",
+    "activeTab",
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess",
     "declarativeNetRequestFeedback",
@@ -79,15 +81,16 @@
     // "bookmarks": "bookmarks/index.html"
   },
 
-  "homepage_url": "https://dombro.site/",
 
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "responseHeaders",
-        "enabled": true,
-        "path": "./rule_resources/responseHeaders.json"
-      }
-    ]
-  }
+  // "declarative_net_request": {
+  //   "rule_resources": [
+  //     {
+  //       "id": "responseHeaders",
+  //       "enabled": true,
+  //       "path": "./rule_resources/responseHeaders.json"
+  //     }
+  //   ]
+  // },
+
+  "homepage_url": "https://dombro.site/"
 }

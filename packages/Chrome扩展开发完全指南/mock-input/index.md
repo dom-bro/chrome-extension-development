@@ -1,8 +1,12 @@
 大家好，我是 dom 哥。我正在写关于 Chrome 扩展开发的系列文章，感兴趣的可以 [点个小星星 <img src="https://img.shields.io/github/stars/dom-bro/chrome-extension-development?label=&style=social" height="14"/>](https://github.com/dom-bro/chrome-extension-development)。
 
+<!-- https://chromewebstore.google.com/detail/mock-input/dpepgpdicolligjnmfekbphpjanlgefm -->
+
 填表单是打工人经常面对的场景，作为一个前端，我经常开发一些PC端的页面，它们主要由表单和表格构成，而输入框又是表单里最常见的表单项。
 
 接下来就试着做一个简单的小扩展，用于快速给表单里的输入框填充值。
+
+> 🎉🎉🎉 已发布到 Chrome 应用商店啦，欢迎体验🙋‍♂️ https://chromewebstore.google.com/detail/mock-input/dpepgpdicolligjnmfekbphpjanlgefm
 
 # Mock.js
 开始前请先让我介绍一下 [Mock.js](https://github.com/nuysoft/Mock)，这是一个模拟数据生成器，也正是这个库给了我灵感。

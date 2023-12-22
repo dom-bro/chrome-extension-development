@@ -1,2 +1,3 @@
 - chrome://* 属于 local resource，其请求返回头上有 X-Frame-Options: DENY，任何企图加载它们都会报错 Not allowed to load local resource
 - chrome.webRequest.* 和 declarativeNetRequest 需要配置 host_permissions!
+- 配置了 background service worker 之后 devtools_page 就显示不出来了~ 😱。破案了：**Chrome Beta** 的 bug，在正式版 Chrome 里正常显示没问题！！！
