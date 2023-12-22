@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Cache-Control",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "resourceTypes": ["stylesheet"],
+      "urlFilter": "chrome://theme/colors.css?sets=ui,chrome"
+    }
+  }
+]
