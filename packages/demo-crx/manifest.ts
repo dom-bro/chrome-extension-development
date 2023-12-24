@@ -25,20 +25,29 @@ export default defineManifest(async (env) => {
         match_about_blank: true,
         match_origin_as_fallback: true,
       },
+      // {
+      //   js: ['content-scripts/document_start_MAIN.ts'],
+      //   matches: ['<all_urls>'],
+      //   run_at: 'document_start',
+      //   world: 'MAIN',
+      //   all_frames: true,
+      //   match_about_blank: true,
+      //   match_origin_as_fallback: true,
+      // },
+      // {
+      //   js: ['content-scripts/document_end.ts'],
+      //   matches: ['<all_urls>'],
+      //   run_at: 'document_end',
+      //   all_frames: true,
+      // },
+      // {
+      //   js: ['content-scripts/document_idle.ts'],
+      //   matches: ['<all_urls>'],
+      //   run_at: 'document_idle',
+      //   all_frames: true,
+      // },
       {
-        js: ['content-scripts/document_end.ts'],
-        matches: ['<all_urls>'],
-        run_at: 'document_end',
-        all_frames: true,
-      },
-      {
-        js: ['content-scripts/document_idle.ts'],
-        matches: ['<all_urls>'],
-        run_at: 'document_idle',
-        all_frames: true,
-      },
-      {
-        js: ['content-scripts/document_idle_main.ts'],
+        js: ['content-scripts/document_idle_MAIN.ts'],
         matches: ['<all_urls>'],
         run_at: 'document_idle',
         world: 'MAIN',
@@ -50,6 +59,7 @@ export default defineManifest(async (env) => {
       service_worker: 'background/service-worker.ts',
     },
     permissions: [
+      'scripting',
       'tabs',
       'activeTab',
       'declarativeNetRequest',
@@ -64,6 +74,9 @@ export default defineManifest(async (env) => {
       'sidePanel',
     ],
     host_permissions: ['<all_urls>'],
+    externally_connectable: {
+      matches: ['<all_urls>'],
+    },
 
     // UI
     action: {

@@ -1,3 +1,6 @@
 - chrome://* 属于 local resource，其请求返回头上有 X-Frame-Options: DENY，任何企图加载它们都会报错 Not allowed to load local resource
 - chrome.webRequest.* 和 declarativeNetRequest 需要配置 host_permissions!
 - 配置了 background service worker 之后 devtools_page 就显示不出来了~ 😱。破案了：**Chrome Beta** 的 bug，在正式版 Chrome 里正常显示没问题！！！
+- @crxjs/vite-plugin 目前的问题：
+  - content-scripts world MAIN 无法 HMR!
+  - content-scripts prod 版本也是 loader import() 方式加载，这会导致加载时间变化，比如 document_start 不能在最先加载！两个 document_start 的加载顺序也无法得到保证！

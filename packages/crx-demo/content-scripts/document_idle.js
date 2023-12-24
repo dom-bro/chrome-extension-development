@@ -1,7 +1,7 @@
 {
   // window.crxDemoContentScriptIdle = {}
   const  now = new Date()
-  console.log(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getMilliseconds()} %ccontent-script`, 'font-weight: bold;color: #090;', 'document_idle', window.customVariable)
+  console.log(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getMilliseconds()} %ccontent-script`, 'font-weight: bold;color: #090;', 'document_idle', {...chrome.runtime})
 }
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log('runtime.onMessageeeee from content-scripts', message, sender, sendResponse)

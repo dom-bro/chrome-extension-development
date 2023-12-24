@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fixBuild": "node --experimental-import-meta-resolve fixBuild.js",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
