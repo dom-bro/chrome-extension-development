@@ -29,6 +29,7 @@ chrome.runtime.onConnect.addListener((port) => {
   }
 })
 
+// for world MAIN HMR
 chrome.scripting
   .registerContentScripts([
     {
